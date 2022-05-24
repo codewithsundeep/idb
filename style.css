@@ -93,6 +93,7 @@ form * {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .data table {
@@ -103,7 +104,10 @@ form * {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     width: 95%;
     margin-bottom: 10px;
-    overflow: scroll;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
 }
 
 tr {
