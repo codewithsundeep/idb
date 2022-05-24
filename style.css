@@ -245,6 +245,10 @@ footer {
 }
 
 @media (max-width:600px) {
+    h1 {
+        font-size: large;
+        padding: 10px;
+    }
     tr {
         font-size: xx-small;
     }
