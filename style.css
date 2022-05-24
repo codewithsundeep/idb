@@ -133,6 +133,10 @@ td:not(td[onclick]) {
     border-bottom: 0.5px solid lightgrey;
 }
 
+td a {
+    text-decoration: none;
+}
+
 footer {
     height: 30px;
     width: 100%;

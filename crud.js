@@ -89,10 +89,14 @@ function readDataFromDb() {
             ${cursorResult.value.name}
             </td>
             <td class="email${cursorResult.key}">
+            <a href="mailto:${cursorResult.value.email}">
             ${cursorResult.value.email}
+            </a>
             </td>
             <td class="phone${cursorResult.key}">
+            <a href="tel:${cursorResult.value.phone}">
             ${cursorResult.value.phone}
+            </a>
             </td>
             <td onclick="doUpdate(${cursorResult.key})">
             Edit
