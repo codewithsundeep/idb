@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+    <title>Contact Management App</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- for pwa -->
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/icons/android-chrome-192x192.png" />
+    <link rel="apple-touch-icon" href="/icons/android-chrome-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#fff" />
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loader">
+        <div class="mesh-loader">
+            <div class="set-one">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="set-two">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    <!-- loader end -->
+    <div class="curve-div">
+        <h1>Contact Management</h1>
+        <h2>Using HTML5 indexedDb Api</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L720,288L1440,224L1440,320L720,320L0,320Z"></path></svg>
+    </div>
+    <div class="crud">
+        <form autocomplete="off" id="form">
+            <a href="#form" class="formnavigate" hidden></a>
+            <h3>Add New Data</h3>
+            <input type="text" placeholder="Name" title="Please enter Name Here" required>
+            <input type="email" placeholder="Email" title="Please Enter Email Here" required>
+            <input type="number" placeholder="Phone" title="Please enter Phone Number Here" required>
+            <input type="submit" class="submit" value="Save Data">
+        </form>
+    </div>
+    <div class="data">
+    </div>
+    <footer>&copy; crud app</footer>
+    <script src="./crud.js"></script>
+</body>
+
+</html>
