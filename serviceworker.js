@@ -20,6 +20,8 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(
         caches.match(e.request).then(res => {
             return res || e.request
+        }).catch(e => {
+            return e.request
         })
     )
 })
