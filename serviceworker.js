@@ -11,17 +11,27 @@ const filesToCache = [
 ]
 self.addEventListener('install', (e) => {
     e.waitUntil(
-        caches.open("myfiles").then(cache => {
-            cache.addAll(filesToCache);
-        })
+        (
+            async() => {
+                const cache = await caches.open("contact");
+                await cache.addAll(filesToCache)
+                console.log("contents has been cached");
+            }
+        )()
     )
 })
+
 self.addEventListener('fetch', (e) => {
     e.respondWith(
-        caches.match(e.request).then(res => {
-            return res || e.request
-        }).catch(e => {
-            return e.request
-        })
+        (
+            async() => {
+                const res = await caches.match(e.request)
+                if (res) { return res }
+                const response = await fetch(e.request);
+                const cache = await caches.open("contact");
+                await cache.put(e.request, response.clone())
+                return response;
+            }
+        )()
     )
 })
